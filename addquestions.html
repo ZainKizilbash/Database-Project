@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Quiz Form</title>
+    <style>
+        body {
+            font-family: 'Popppins', sans-serif;
+            margin: 20px;
+            background-color: #1cbbb4;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid transparent;
+            border-radius: none;
+            background-color: #1a2e35;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ff4f5a;
+            color: white;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            /* Adjusted margin */
+            width: 100%;
+            /* Make the button full width */
+        }
+
+        button:hover {
+            background-color: #1a2e35;
+            border-color: #ff4f5a;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            for (let i = 1; i <= 10; i++) {
+                const correctOption = document.getElementById(`q${i}_correct`).value.toLowerCase();
+                const options = [
+                    document.getElementById(`q${i}_opt1`).value.toLowerCase(),
+                    document.getElementById(`q${i}_opt2`).value.toLowerCase(),
+                    document.getElementById(`q${i}_opt3`).value.toLowerCase(),
+                    document.getElementById(`q${i}_opt4`).value.toLowerCase(),
+                ];
+
+                if (!options.includes(correctOption)) {
+                    alert(`For Question ${i}: Correct option must match one of the four options.`);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="/addquestionform" method="post" onsubmit="return validateForm()">
+        <h2>Quiz Form</h2>
+
+        <!-- Question 1 -->
+        <label for="q1_id">Question ID:</label>
+        <input type="text" id="q1_id" name="q1_id" required>
+
+        <label for="q1">Question 1:</label>
+        <input type="text" id="q1" name="question1" required>
+
+        <label for="q1_opt1">Option 1:</label>
+        <input type="text" id="q1_opt1" name="q1_option1" required>
+
+        <label for="q1_opt2">Option 2:</label>
+        <input type="text" id="q1_opt2" name="q1_option2" required>
+
+        <label for="q1_opt3">Option 3:</label>
+        <input type="text" id="q1_opt3" name="q1_option3" required>
+
+        <label for="q1_opt4">Option 4:</label>
+        <input type="text" id="q1_opt4" name="q1_option4" required>
+
+        <label for="q1_correct">Correct Option:</label>
+        <input type="text" id="q1_correct" name="q1_correct" required>
+
+        <!-- Question 2 -->
+        <label for="q2_id">Question ID:</label>
+        <input type="text" id="q2_id" name="q2_id" required>
+
+        <label for="q2">Question 2:</label>
+        <input type="text" id="q2" name="question2" required>
+
+        <label for="q2_opt1">Option 1:</label>
+        <input type="text" id="q2_opt1" name="q2_option1" required>
+
+        <label for="q2_opt2">Option 2:</label>
+        <input type="text" id="q2_opt2" name="q2_option2" required>
+
+        <label for="q2_opt3">Option 3:</label>
+        <input type="text" id="q2_opt3" name="q2_option3" required>
+
+        <label for="q2_opt4">Option 4:</label>
+        <input type="text" id="q2_opt4" name="q2_option4" required>
+
+        <label for="q2_correct">Correct Option:</label>
+        <input type="text" id="q2_correct" name="q2_correct" required>
+
+        <!-- Repeat the above block for remaining questions (3 to 10)-->
+
+        <label for="q3_id">Question ID:</label>
+        <input type="text" id="q3_id" name="q3_id" required>
+
+        <label for="q3">Question 3:</label>
+        <input type="text" id="q3" name="question3" required>
+
+        <label for="q3_opt1">Option 1:</label>
+        <input type="text" id="q3_opt1" name="q3_option1" required>
+
+        <label for="q3_opt2">Option 2:</label>
+        <input type="text" id="q3_opt2" name="q3_option2" required>
+
+        <label for="q3_opt3">Option 3:</label>
+        <input type="text" id="q3_opt3" name="q3_option3" required>
+
+        <label for="q3_opt4">Option 4:</label>
+        <input type="text" id="q3_opt4" name="q3_option4" required>
+
+        <label for="q3_correct">Correct Option:</label>
+        <input type="text" id="q3_correct" name="q3_correct" required>
+
+
+        <label for="q4_id">Question ID:</label>
+        <input type="text" id="q4_id" name="q4_id" required>
+
+        <label for="q4">Question 4:</label>
+        <input type="text" id="q4" name="question4" required>
+
+        <label for="q4_opt1">Option 1:</label>
+        <input type="text" id="q4_opt1" name="q4_option1" required>
+
+        <label for="q4_opt2">Option 2:</label>
+        <input type="text" id="q4_opt2" name="q4_option2" required>
+
+        <label for="q4_opt3">Option 3:</label>
+        <input type="text" id="q4_opt3" name="q4_option3" required>
+
+        <label for="q4_opt4">Option 4:</label>
+        <input type="text" id="q4_opt4" name="q4_option4" required>
+
+        <label for="q4_correct">Correct Option:</label>
+        <input type="text" id="q4_correct" name="q4_correct" required>
+
+
+        <label for="q5_id">Question ID:</label>
+        <input type="text" id="q5_id" name="q5_id" required>
+
+        <label for="q5">Question 5:</label>
+        <input type="text" id="q5" name="question5" required>
+
+        <label for="q5_opt1">Option 1:</label>
+        <input type="text" id="q5_opt1" name="q5_option1" required>
+
+        <label for="q5_opt2">Option 2:</label>
+        <input type="text" id="q5_opt2" name="q5_option2" required>
+
+        <label for="q5_opt3">Option 3:</label>
+        <input type="text" id="q5_opt3" name="q5_option3" required>
+
+        <label for="q5_opt4">Option 4:</label>
+        <input type="text" id="q5_opt4" name="q5_option4" required>
+
+        <label for="q5_correct">Correct Option:</label>
+        <input type="text" id="q5_correct" name="q5_correct" required>
+
+
+        <label for="q6_id">Question ID:</label>
+        <input type="text" id="q6_id" name="q6_id" required>
+
+        <label for="q6">Question 6:</label>
+        <input type="text" id="q6" name="question6" required>
+
+        <label for="q6_opt1">Option 1:</label>
+        <input type="text" id="q6_opt1" name="q6_option1" required>
+
+        <label for="q6_opt2">Option 2:</label>
+        <input type="text" id="q6_opt2" name="q6_option2" required>
+
+        <label for="q6_opt3">Option 3:</label>
+        <input type="text" id="q6_opt3" name="q6_option3" required>
+
+        <label for="q6_opt4">Option 4:</label>
+        <input type="text" id="q6_opt4" name="q6_option4" required>
+
+        <label for="q6_correct">Correct Option:</label>
+        <input type="text" id="q6_correct" name="q6_correct" required>
+
+
+        <label for="q7_id">Question ID:</label>
+        <input type="text" id="q7_id" name="q7_id" required>
+
+        <label for="q7">Question 7:</label>
+        <input type="text" id="q7" name="question7" required>
+
+        <label for="q7_opt1">Option 1:</label>
+        <input type="text" id="q7_opt1" name="q7_option1" required>
+
+        <label for="q7_opt2">Option 2:</label>
+        <input type="text" id="q7_opt2" name="q7_option2" required>
+
+        <label for="q7_opt3">Option 3:</label>
+        <input type="text" id="q7_opt3" name="q7_option3" required>
+
+        <label for="q7_opt4">Option 4:</label>
+        <input type="text" id="q7_opt4" name="q7_option4" required>
+
+        <label for="q7_correct">Correct Option:</label>
+        <input type="text" id="q7_correct" name="q7_correct" required>
+
+
+        <label for="q8_id">Question ID:</label>
+        <input type="text" id="q8_id" name="q8_id" required>
+
+        <label for="q8">Question 8:</label>
+        <input type="text" id="q8" name="question8" required>
+
+        <label for="q8_opt1">Option 1:</label>
+        <input type="text" id="q8_opt1" name="q8_option1" required>
+
+        <label for="q8_opt2">Option 2:</label>
+        <input type="text" id="q8_opt2" name="q8_option2" required>
+
+        <label for="q8_opt3">Option 3:</label>
+        <input type="text" id="q8_opt3" name="q8_option3" required>
+
+        <label for="q8_opt4">Option 4:</label>
+        <input type="text" id="q8_opt4" name="q8_option4" required>
+
+        <label for="q8_correct">Correct Option:</label>
+        <input type="text" id="q8_correct" name="q8_correct" required>
+
+
+        <label for="q9_id">Question ID:</label>
+        <input type="text" id="q9_id" name="q9_id" required>
+
+        <label for="q9">Question 9:</label>
+        <input type="text" id="q9" name="question9" required>
+
+        <label for="q9_opt1">Option 1:</label>
+        <input type="text" id="q9_opt1" name="q9_option1" required>
+
+        <label for="q9_opt2">Option 2:</label>
+        <input type="text" id="q9_opt2" name="q9_option2" required>
+
+        <label for="q9_opt3">Option 3:</label>
+        <input type="text" id="q9_opt3" name="q9_option3" required>
+
+        <label for="q9_opt4">Option 4:</label>
+        <input type="text" id="q9_opt4" name="q9_option4" required>
+
+        <label for="q9_correct">Correct Option:</label>
+        <input type="text" id="q9_correct" name="q9_correct" required>
+
+
+        <label for="q10_id">Question ID:</label>
+        <input type="text" id="q10_id" name="q10_id" required>
+
+        <label for="q10">Question 10:</label>
+        <input type="text" id="q10" name="question10" required>
+
+        <label for="q10_opt1">Option 1:</label>
+        <input type="text" id="q10_opt1" name="q10_option1" required>
+
+        <label for="q10_opt2">Option 2:</label>
+        <input type="text" id="q10_opt2" name="q10_option2" required>
+
+        <label for="q10_opt3">Option 3:</label>
+        <input type="text" id="q10_opt3" name="q10_option3" required>
+
+        <label for="q10_opt4">Option 4:</label>
+        <input type="text" id="q10_opt4" name="q10_option4" required>
+
+        <label for="q10_correct">Correct Option:</label>
+        <input type="text" id="q10_correct" name="q10_correct" required>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>

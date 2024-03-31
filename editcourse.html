@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/editcourse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Edit Course</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Course Settings</h1>
+
+        <!-- Edit Course button -->
+        <form method="post" action="/editquiz">
+            <button type="submit">Edit Course</button>
+        </form>
+
+        <!-- Delete Course button -->
+        <form method="post" action="/deletecourse">
+            <button type="submit">Delete Course</button>
+        </form>
+    </div>
+
+    <script>
+        // Redirect to removecourse.html when Delete Course button is clicked
+        document.querySelector('form[action="/deletecourse"]').addEventListener('submit', function (event) {
+            event.preventDefault();
+            window.location.href = '/removecourse';
+        });
+
+        document.querySelector('form[action="/editquiz"]').addEventListener('submit', function (event) {
+            event.preventDefault();
+            window.location.href = '/editquiz';
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/accountdeleted.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Account Status</title>
+</head>
+
+<body>
+    <h1>Account Status</h1>
+
+    <div id="statusMessage"></div>
+
+    <script>
+        // Get the value of confirmDeletion from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const confirmDeletion = urlParams.get('confirmDeletion');
+
+        // Display different messages based on the confirmDeletion value
+        const statusMessage = document.getElementById('statusMessage');
+        if (confirmDeletion == 'true') {
+            statusMessage.textContent = 'Account Deleted Successfully';
+            // Redirect to index.html after a short delay
+            setTimeout(function () {
+                window.location.href = '/';
+            }, 3000); // Redirect after 3 seconds (adjust as needed)
+        }
+    </script>
+</body>
+
+</html>

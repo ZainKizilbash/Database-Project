@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/afterlogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>User Dashboard</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome, <span id="userName"></span>!</h1>
+    </header>
+
+    <nav>
+        <a href="addcourse.html">Add Course</a>
+        <a href="viewcourses.html" onclick="viewScorecard()">View Scorecard</a>
+        <a href="editcourse.html" onclick="editcourse()">Edit Course</a>
+        <a href="settings.html" onclick="settings()">Settings</a>
+    </nav>
+
+    <section id="content">
+        <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Retrieve user information from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const firstName = urlParams.get('fname');
+        const lastName = urlParams.get('lname');
+
+        // Display the user's first and last name
+        document.getElementById('userName').innerText = `${firstName} ${lastName}`;
+    </script>
+
+
+</body>
+
+</html>

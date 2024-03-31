@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/settings.css">
+    <title>User Settings</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>User Settings</h1>
+    </header>
+
+    <div class="settings-buttons">
+        <button class="settings-button" onclick="changeDetails()">Change Personal Details</button>
+        <button class="settings-button" onclick="deleteAccount()">Delete Account</button>
+        <button class="settings-button" onclick="logOut()">Log Out</button>
+    </div>
+
+</body>
+<script>
+    function changeDetails() {
+        window.location.href = 'changepersonal.html';
+    }
+    function deleteAccount() {
+        window.location.href = 'deleteaccount.html';
+    }
+
+    function logOut() {
+        window.location.href = '/';
+    }
+
+</script>
+
+</html>

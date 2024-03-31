@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+    <title>Course Information</title>
+</head>
+
+<body>
+    <form action="mathcourseForm" method="post">
+        <label for="courseId">Course ID (Format: MT###):</label>
+        <input type="text" id="courseId" name="courseId" placeholder="Enter Course ID" required pattern="MT\d{3}">
+
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" name="courseName" placeholder="Enter Course Name" required>
+
+        <button href="addquestions.html" type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

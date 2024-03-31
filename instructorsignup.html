@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Registration</title>
+    <link rel="stylesheet" type="text/css" href="css/is.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Instructor Registration Form</h1>
+    <form action="/register-instructor" method="post">
+        <label for="instructorID">Instructor ID:</label>
+        <input type="text" id="instructorID" name="instructorID" pattern="[0-9]{2}T-[0-9]{4}" required
+            placeholder="99T-9999"><br><br>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required placeholder="first name"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required placeholder="last name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" placeholder="abc@gmail.com"
+            required><br><br>
+
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" required placeholder="For eg: BSCS"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required placeholder="age"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="password" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
